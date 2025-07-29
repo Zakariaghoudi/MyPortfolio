@@ -120,7 +120,8 @@ const Projects = () => {
       liveLink: "https://calculator-nu-ivory-79.vercel.app",
       githubLink: "https://github.com/Zakariaghoudi/Calculator",
     },
-    title: "To Do App",
+    
+      {title: "To Do App",
       description:"This is a simple, aesthetically pleasing to do list  web app.",
       techStack: ["React js ", "CSS3", "redux"],
       imageUrl: "https://tse1.mm.bing.net/th/id/OIP.T6LhoCvqzHY5ScqHhb-L3wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
