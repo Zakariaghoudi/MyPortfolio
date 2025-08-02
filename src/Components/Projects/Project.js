@@ -1,6 +1,11 @@
 
 import { useState, useEffect } from "react"
 import "./Project.css"
+// import calcul from './images/calcul.png'
+// import clock from "./images/clock.jpeg"
+// import todolist from "./images/todolist.png"
+// import movieapp from "./images/movieapp.png"
+// import weatherapp from "../images/weather.png"
 
 // Icons
 const ExternalLinkIcon = (props) => (
@@ -95,20 +100,35 @@ const Projects = () => {
   }, [])
 
   const projects = [
+    {  title: "ToDo List  App",
+      description:"This is a simple, aesthetically pleasing to do list  web app.",
+      techStack: ["React js ", "CSS3", "redux"],
+      imageUrl: "./images/todolist.png",
+      liveLink: "https://todolist-woad-seven.vercel.app/" ,
+      githubLink: "https://github.com/Zakariaghoudi/redux",
+    },
+
+     {
+      title: "Weather App",
+      description: "A weather web application building with react js,  ",
+      techStack: ["React", "Node.js", "axios"],
+      imageUrl: "./images/weather.png",
+      liveLink: "https://weather-app-eight-ebon-77.vercel.app/",
+      githubLink: "https://github.com/Zakariaghoudi/Weather-App",
+    },
     {
       title: "Movie App",
       description: "A movie web application building with react js ",
       techStack: ["React", "Node.js"],
-      imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/cfe821125810473.6120aff0e1fff.png",
-      liveLink: "https://router-checkpoint-nine.vercel.app",
-      githubLink: "https://github.com/Zakariaghoudi/movie-app",
+      imageUrl: "./images/movie.png",
+      liveLink: "https://movie-apps-eight.vercel.app/",
+      githubLink: "https://github.com/Zakariaghoudi/movie-apps",
     },
     {
       title: "Simple Clock",
-      description:
-        "This a simple simple e-clock web application. ",
+      description:"This a simple simple e-clock web application. ",
       techStack: ["HTML","CSS", "JavaScript"],
-      imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/050/954/827/large/45-seconds-digital-clock-countdown-timer-animation-on-white-screen-perfect-for-urgency-timers-deadlines-free-video.jpg",
+      imageUrl:"././images/clock.jpeg",
       liveLink: "https://clock-pi-three.vercel.app/",
       githubLink: "https://github.com/Zakariaghoudi/Clock",
     },
@@ -116,7 +136,7 @@ const Projects = () => {
       title: "Calculator",
       description:"This is a simple, aesthetically pleasing calculator web app.",
       techStack: ["HTML", "CSS3", "JavaScript"],
-      imageUrl: "https://tse4.mm.bing.net/th/id/OIP.KV21ji472SY-rg--3vnvzAHaEM?rs=1&pid=ImgDetMain&o=7&rm=3",
+      imageUrl: "./images/calcul.png",
       liveLink: "https://calculator-nu-ivory-79.vercel.app",
       githubLink: "https://github.com/Zakariaghoudi/Calculator",
     },

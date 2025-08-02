@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from "react"
 import "./About.css"
-import { DiHtml5, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
-import { FaMobileAlt, FaPuzzlePiece } from 'react-icons/fa';
+import { DiHtml5, DiResponsive, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
+import { FaMobileAlt } from 'react-icons/fa';
 import img3 from "../../Assets/img3.jpg"
 const About = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -44,7 +44,7 @@ const About = () => {
             {icon: <DiNodejs color="#68a063" size="60px" /> },
             {icon: <DiGithub color="#333" size="60px" /> },
             {icon: <FaMobileAlt color="#007bff" size="60px" /> },
-            {icon: <FaPuzzlePiece color="#ff9800" size="60px" /> },
+            {icon: <DiResponsive color="#ff9800" size="60px" /> },
           ].map((skill, index) => (
             <span key={index} className="skill-tag" style={{ display: "flex", alignItems: "center", gap: "0.5em" }}>
               {skill.icon}
