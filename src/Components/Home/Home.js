@@ -5,7 +5,9 @@ import { Link } from "react-router-dom"
 import "./Home.css"
 import logo from '../../Assets/img.jpg'
 import CV from '../../Assets/CV.pdf'
-
+import calcul from "../../Assets/images/calcul.png"
+import clock from "../../Assets/images/clock.jpeg"
+import movieApp from "../../Assets/images/movieapp.png"
 //useRef hooks to create reference fo pages sections
 const Home = () => {
   const aboutRef = useRef(null)
@@ -181,29 +183,29 @@ const Home = () => {
                 title: "Movie App",
                 description: "A movie web application building with react js ",
                 techStack: ["React", "Node.js"],
-                imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/cfe821125810473.6120aff0e1fff.png",
+                imageUrl: movieApp,
               },
               {
                 title: "Simple Clock",
                 description: "A simple e-clock web app.",
                 techStack: ["HTML","CSS", "JavaScript"],
-                imageUrl:"https://static.vecteezy.com/system/resources/thumbnails/050/954/827/large/45-seconds-digital-clock-countdown-timer-animation-on-white-screen-perfect-for-urgency-timers-deadlines-free-video.jpg",
+                imageUrl: clock,
               },
               {
                 title: "Calculator",
                 description: "This is a simple, aesthetically pleasing calculator web app.",
                 techStack: ["HTML", "CSS3", "JavaScript"],
-                imageUrl: "https://tse4.mm.bing.net/th/id/OIP.KV21ji472SY-rg--3vnvzAHaEM?rs=1&pid=ImgDetMain&o=7&rm=3",
+                imageUrl: calcul,
               },
-            ].map((project, index) => (
+            ].map((project, index ) => (
               <div key={index} className="project-card-preview">
                 <img
-                  src={project.imageUrl || "/placeholder.svg"}
-                  alt={project.title}
+                  src= {project.imageUrl}
+                  alt={project.imageUrl}
                   className="project-image-preview"
                   onError={(e) => {
                     e.target.onerror = null
-                    e.target.src = "/placeholder.svg?height=400&width=600&text=Project+Image"
+                    e.target.src = project.imageUrl
                   }}
                 />
                 <div className="project-content-preview">

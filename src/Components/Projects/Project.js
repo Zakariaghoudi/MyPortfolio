@@ -1,13 +1,11 @@
 
 import { useState, useEffect } from "react"
 import "./Project.css"
-// import calcul from './images/calcul.png'
-// import clock from "./images/clock.jpeg"
-// import todolist from "./images/todolist.png"
-// import movieapp from "./images/movieapp.png"
-// import weatherapp from "../images/weather.png"
-
-// Icons
+import calcul from "../../Assets/images/calcul.png"
+import clock from "../../Assets/images/clock.jpeg"
+import todolist from "../../Assets/images/todolist.png"
+import weatherapp from "../../Assets/images/weather.png"
+import movieApp from "../../Assets/images/movieapp.png"
 const ExternalLinkIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -21,8 +19,8 @@ const ExternalLinkIcon = (props) => (
     strokeLinejoin="round"
     {...props}
   >
-    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-    <polyline points="15 3 21 3 21 9"></polyline>
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"> </path>
+    <polyline points="15 3 21 3 21 9"> </polyline>
     <line x1="10" x2="21" y1="14" y2="3"></line>
   </svg>
 )
@@ -53,7 +51,7 @@ const ProjectCard = ({ title, description, techStack, imageUrl, liveLink, github
         alt={title}
         className="project-image"
         onError={(e) => {
-          e.target.onerror = null
+          e.target.onError = null
           e.target.src = "/placeholder.svg?height=400&width=600&text=Project+Image"
         }}
       />
@@ -100,10 +98,37 @@ const Projects = () => {
   }, [])
 
   const projects = [
+     {
+      title: "Movie App",
+      description: "A movie web application building with react js ",
+      techStack: ["React", "Node.js"],
+      imageUrl: movieApp,
+      liveLink: "https://movie-apps-eight.vercel.app/",
+      githubLink: "https://github.com/Zakariaghoudi/movie-apps",
+    },
+    
+    {
+      title: "Simple Clock",
+      description:"This a simple simple e-clock web application. ",
+      techStack: ["HTML","CSS", "JavaScript"],
+      imageUrl: clock,
+      liveLink: "https://clock-pi-three.vercel.app/",
+      githubLink: "https://github.com/Zakariaghoudi/Clock",
+    },
+    
+    {
+      title: "Calculator",
+      description:"This is a simple, aesthetically pleasing calculator web app.",
+      techStack: ["HTML", "CSS3", "JavaScript"],
+      imageUrl: calcul,
+      liveLink: "https://calculator-nu-ivory-79.vercel.app",
+      githubLink: "https://github.com/Zakariaghoudi/Calculator",
+    },
+    
     {  title: "ToDo List  App",
       description:"This is a simple, aesthetically pleasing to do list  web app.",
       techStack: ["React js ", "CSS3", "redux"],
-      imageUrl: "./images/todolist.png",
+      imageUrl: todolist,
       liveLink: "https://todolist-woad-seven.vercel.app/" ,
       githubLink: "https://github.com/Zakariaghoudi/redux",
     },
@@ -112,42 +137,12 @@ const Projects = () => {
       title: "Weather App",
       description: "A weather web application building with react js,  ",
       techStack: ["React", "Node.js", "axios"],
-      imageUrl: "./images/weather.png",
+      imageUrl: weatherapp,
       liveLink: "https://weather-app-eight-ebon-77.vercel.app/",
       githubLink: "https://github.com/Zakariaghoudi/Weather-App",
     },
-    {
-      title: "Movie App",
-      description: "A movie web application building with react js ",
-      techStack: ["React", "Node.js"],
-      imageUrl: "./images/movie.png",
-      liveLink: "https://movie-apps-eight.vercel.app/",
-      githubLink: "https://github.com/Zakariaghoudi/movie-apps",
-    },
-    {
-      title: "Simple Clock",
-      description:"This a simple simple e-clock web application. ",
-      techStack: ["HTML","CSS", "JavaScript"],
-      imageUrl:"././images/clock.jpeg",
-      liveLink: "https://clock-pi-three.vercel.app/",
-      githubLink: "https://github.com/Zakariaghoudi/Clock",
-    },
-    {
-      title: "Calculator",
-      description:"This is a simple, aesthetically pleasing calculator web app.",
-      techStack: ["HTML", "CSS3", "JavaScript"],
-      imageUrl: "./images/calcul.png",
-      liveLink: "https://calculator-nu-ivory-79.vercel.app",
-      githubLink: "https://github.com/Zakariaghoudi/Calculator",
-    },
+   
     
-      {title: "To Do App",
-      description:"This is a simple, aesthetically pleasing to do list  web app.",
-      techStack: ["React js ", "CSS3", "redux"],
-      imageUrl: "https://tse1.mm.bing.net/th/id/OIP.T6LhoCvqzHY5ScqHhb-L3wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
-      liveLink: "https://todolist-woad-seven.vercel.app/",
-      githubLink: "https://github.com/Zakariaghoudi/redux",
-    },
   ]
 
   return (
@@ -161,7 +156,7 @@ const Projects = () => {
         </p>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard key={index} {...project}  />
           ))}
         </div>
       </div>
