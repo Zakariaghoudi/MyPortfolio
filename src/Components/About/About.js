@@ -42,7 +42,7 @@ const About = () => {
             {icon: <DiReact color="#61dafb" size="60px" /> },
             {icon: <DiNodejs color="#68a063" size="60px" /> },
             {icon: <DiGithub color="#333" size="60px" /> },
-            {icon: <DiResponsive color="#ff9800" size="60px" /> },
+            {icon: <DiResponsive color="#ff9800" size="75px" /> },
           ].map((skill, index) => (
             <span key={index} className="skill-tag" style={{ display: "flex", alignItems: "center", gap: "0.5em" }}>
               {skill.icon}
