@@ -6,6 +6,7 @@ import clock from "../../Assets/images/clock.jpeg"
 import todolist from "../../Assets/images/todolist.png"
 import weatherapp from "../../Assets/images/weather.png"
 import movieApp from "../../Assets/images/movieapp.png"
+import chatApp from "../../Assets/images/chatapp.png"
 const ExternalLinkIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +142,15 @@ const Projects = () => {
       liveLink: "https://weather-app-eight-ebon-77.vercel.app/",
       githubLink: "https://github.com/Zakariaghoudi/Weather-App",
     },
+     {
+      title: "Chat Application",
+      description: "An innovative Chat application integrating the power of AI   ",
+      techStack: ["React", "Node.js", "axios"],
+      imageUrl: chatApp,
+      liveLink: "https://chat-application-nine-nu.vercel.app/",
+      githubLink: "https://github.com/Zakariaghoudi/chat-application",
    
-    
+     }
   ]
 
   return (
