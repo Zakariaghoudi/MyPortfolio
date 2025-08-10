@@ -6,7 +6,7 @@ import clock from "../../Assets/images/clock.jpeg"
 import todolist from "../../Assets/images/todolist.png"
 import weatherapp from "../../Assets/images/weather.png"
 import movieApp from "../../Assets/images/movieapp.png"
-import chatApp from "../../Assets/images/chatapp.png"
+import chatApp from "../../Assets/images/chat-app.png"
 const ExternalLinkIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
