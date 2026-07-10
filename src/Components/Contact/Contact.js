@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react"
 import "./Contact.css"
-import logo2 from '../Assets/img2.jpg'
+import logo2 from '../../Assets/img2.jpg'
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
