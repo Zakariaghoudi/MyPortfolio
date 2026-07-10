@@ -48,7 +48,7 @@ const Home = () => {
 
   const heroData = {
     name: "Ghoudi Zakaria",
-    title: "Student in GoMyCode",
+    title: "SOFTWARE DEVELOPMENT WITH AI SKILLS",
     description:
       "As a passionate and dedicated student, I am currently enhancing my skills in web development at GoMyCode. I thrive on creating intuitive and efficient web applications and am constantly exploring new technologies to build robust and engaging user experiences.",
     imageUrl:{logo}
