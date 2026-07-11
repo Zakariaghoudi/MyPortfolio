@@ -1,0 +1,15 @@
+# Ghoudi Zakaria - Portfolio
+
+> Full-Stack Web Developer specializing in React, Node.js, and AI-assisted web development. This site showcases projects, skills, and background.
+
+## Pages
+
+- [Home](https://my-portfolio-xi-jet-65.vercel.app/): Introduction, hero section, and quick overview of skills and featured projects.
+- [About](https://my-portfolio-xi-jet-65.vercel.app/about): Background, skills (HTML, CSS, JavaScript, React, Node.js), and education.
+- [Projects](https://my-portfolio-xi-jet-65.vercel.app/projects): Full list of projects including Movie App, Weather App, Chat Application, To-Do List App, Calculator, and Simple Clock.
+- [Contact](https://my-portfolio-xi-jet-65.vercel.app/contact): Contact form and direct contact information.
+
+## Notes
+
+- Built with React (Create React App), React Router, and Framer Motion.
+- Source code for individual projects is linked from the Projects page (GitHub).
