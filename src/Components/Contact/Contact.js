@@ -48,29 +48,7 @@ const ContactForm = () => {
     }
   }
 
-  /*const handleSubmit = (e) => {
-    e.preventDefault()
-
-    if (!validateForm()) {
-      return
-    }
-
-    setStatus("sending")
-    console.log("Form Data Submitted:", formData)
-
-    setTimeout(() => {
-      setStatus("success")
-      setFormData({ name: "", email: "", message: "" })
-      setErrors({})
-
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setStatus("")
-      }, 5000)
-    }, 1500)
-  }
-
- **/ return (
+ return (
     <form action="https://formsubmit.co/412c4971eb389ab58bb5f11fce503f8a" method="POST"  className="contact-form">
       <div className="form-group">
         <label htmlFor="name" className="form-label">
