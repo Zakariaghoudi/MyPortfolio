@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import "./About.css"
 import { DiHtml5, DiResponsive, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
+import SEO from "../SEO/SEO"
 import img3 from "../../Assets/img3.jpg"
 const About = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -17,10 +18,15 @@ const About = () => {
 
   return (
     <div className={`about-page ${isVisible ? "animate-fade-in" : ""}`} >
+      <SEO
+        title="About Me | Ghoudi Zakaria"
+        description="Learn more about Ghoudi Zakaria's background, skills (HTML, CSS, JavaScript, React, Node.js), and web development approach."
+        path="/about"
+      />
       <h2 className="page-title">About Me</h2>
 
       <div className="about-content">
-        <img src={img3} className="img3"/>
+        <img src={img3} className="img3" alt="Ghoudi Zakaria portrait" />
         <p className="section-content">
           I am a highly motivated and results-driven web developer with a strong foundation in modern web technologies.
           My journey into programming began with a fascination for how digital experiences are built, leading me to
