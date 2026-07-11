@@ -7,6 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
@@ -63,7 +64,16 @@ const AppContent = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    // Show the loading screen only once per browser session, and keep it
+    // brief so crawlers/users see real content quickly.
+    if (sessionStorage.getItem("hasLoadedOnce")) {
+      setLoading(false);
+      return;
+    }
+    const timer = setTimeout(() => {
+      setLoading(false);
+      sessionStorage.setItem("hasLoadedOnce", "true");
+    }, 800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -110,9 +120,11 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </HelmetProvider>
   );
 };
 
