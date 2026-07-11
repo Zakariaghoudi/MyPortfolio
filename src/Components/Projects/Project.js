@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react"
 import "./Project.css"
+import SEO from "../SEO/SEO"
 import calcul from "../../Assets/images/calcul.png"
 import clock from "../../Assets/images/clock.jpeg"
 import todolist from "../../Assets/images/todolist.png"
@@ -101,7 +102,7 @@ const Projects = () => {
   const projects = [
      {
       title: "Movie App",
-      description: "A movie web application building with react js ",
+      description: "A movie web application built with React.js and Node.js.",
       techStack: ["React", "Node.js"],
       imageUrl: movieApp,
       liveLink: "https://movie-apps-eight.vercel.app/",
@@ -110,7 +111,7 @@ const Projects = () => {
     
     {
       title: "Simple Clock",
-      description:"This a simple simple e-clock web application. ",
+      description:"A simple digital clock web application.",
       techStack: ["HTML","CSS", "JavaScript"],
       imageUrl: clock,
       liveLink: "https://clock-pi-three.vercel.app/",
@@ -136,7 +137,7 @@ const Projects = () => {
 
      {
       title: "Weather App",
-      description: "A weather web application building with react js,  ",
+      description: "A weather web application built with React.js and Axios.",
       techStack: ["React", "Node.js", "axios"],
       imageUrl: weatherapp,
       liveLink: "https://weather-app-eight-ebon-77.vercel.app/",
@@ -155,6 +156,11 @@ const Projects = () => {
 
   return (
     <div className={`projects-page ${isVisible ? "animate-fade-in" : ""}`} >
+      <SEO
+        title="Projects | Ghoudi Zakaria"
+        description="A selection of web development projects by Ghoudi Zakaria, including a Movie App, Weather App, Chat App, and more — built with React, Node.js, and JavaScript."
+        path="/projects"
+      />
       <h2 className="page-title">My Projects</h2>
       <div className="projects-content">
         <h3 className="section-title">Featured Work</h3>
