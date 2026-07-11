@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+Sitemap: https://my-portfolio-xi-jet-65.vercel.app/sitemap.xml
