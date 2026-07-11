@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react"
 import "./Contact.css"
+import SEO from "../SEO/SEO"
 import logo2 from '../../Assets/img2.jpg'
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -125,10 +126,15 @@ const Contact = () => {
 
   return (
     <div className={`contact-page ${isVisible ? "animate-fade-in" : ""}`} >
+      <SEO
+        title="Contact | Ghoudi Zakaria"
+        description="Get in touch with Ghoudi Zakaria for freelance or full-time web development opportunities."
+        path="/contact"
+      />
 
       <div className="contact-content">
         <h3 className="section-title">Let's Connect!</h3>
-        <img src={logo2} className="image2"/>
+        <img src={logo2} className="image2" alt="Ghoudi Zakaria" />
         <ContactForm />
       </div>
     </div>
