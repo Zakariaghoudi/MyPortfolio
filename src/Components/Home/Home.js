@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from "react"
 import { useAnimation , motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import "./Home.css"
+import SEO from "../SEO/SEO"
 import logo from '../../Assets/img.jpg'
 import CV from '../../Assets/CV.pdf'
 import calcul from "../../Assets/images/calcul.png"
@@ -76,6 +77,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <SEO
+        title="Ghoudi Zakaria | Full-Stack Web Developer"
+        description="Ghoudi Zakaria is a software developer specializing in React, Node.js, and AI-assisted web development. Explore my projects, skills, and experience."
+        path="/"
+      />
 
       {/* Hero Section */}
 
@@ -133,11 +139,11 @@ const Home = () => {
           <div className="hero-image-wrapper">
             <img
               src={logo}
-              alt="logo"
+              alt="Ghoudi Zakaria - Full-Stack Web Developer"
               className="hero-image"
               onError={(e) => {
                 e.target.onerror = null
-                e.target.src = {logo}
+                e.target.src = logo
               }}
             />
           </div>
@@ -181,13 +187,13 @@ const Home = () => {
             {[
               {
                 title: "Movie App",
-                description: "A movie web application building with react js ",
+                description: "A movie web application built with React.js and Node.js.",
                 techStack: ["React", "Node.js"],
                 imageUrl: movieApp,
               },
               {
                 title: "Simple Clock",
-                description: "A simple e-clock web app.",
+                description: "A simple digital clock web app.",
                 techStack: ["HTML","CSS", "JavaScript"],
                 imageUrl: clock,
               },
@@ -201,7 +207,7 @@ const Home = () => {
               <div key={index} className="project-card-preview">
                 <img
                   src= {project.imageUrl}
-                  alt={project.imageUrl}
+                  alt={`${project.title} project screenshot`}
                   className="project-image-preview"
                   onError={(e) => {
                     e.target.onerror = null
