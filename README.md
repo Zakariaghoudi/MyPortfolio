@@ -6,7 +6,7 @@ A modern, responsive portfolio website built with React.js showcasing my web dev
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.com) _(Replace with your actual URL)_
+[View Live Portfolio](https://ghoudizakaria.vercel.app) 
 
 ## ✨ Features
 
