@@ -210,9 +210,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ghoudi Zakaria**
 
-- Portfolio: [your-portfolio-url.com](https://your-portfolio-url.com)
-- GitHub: [@yghoudizakaria](https://github.com/Zakariaghoudi)
-- LinkedIn: [Ghoudi Zakaria](https://linkedin.com/in/yourprofile)
+- Portfolio: [https://ghoudizakaria.vercel.app]
+- GitHub: [@Zakariaghoudi](https://github.com/Zakariaghoudi)
+- LinkedIn: [Ghoudi Zakaria](https://linkedin.com/in/zakariaghoudi)
 - Email: zakariaghoudi1@gmail.com
 
 ## 🙏 Acknowledgments
