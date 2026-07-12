@@ -70,21 +70,22 @@ A modern, responsive portfolio website built with React.js showcasing my web dev
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone
+   https://github.com/Zakariaghoudi/MyPortfolio.git
    cd portfolio
    \`\`\`
 
-2. **Install dependencies**
+3. **Install dependencies**
    \`\`\`bash
    npm install
    \`\`\`
 
-3. **Start the development server**
+4. **Start the development server**
    \`\`\`bash
    npm start
    \`\`\`
 
-4. **Open your browser**
+5. **Open your browser**
    Navigate to `http://localhost:3000` to view the portfolio
 
 ### **Build for Production**
@@ -210,7 +211,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ghoudi Zakaria**
 
-- Portfolio: [https://ghoudizakaria.vercel.app]
+- Portfolio:[View Now] (https://ghoudizakaria.vercel.app)
 - GitHub: [@Zakariaghoudi](https://github.com/Zakariaghoudi)
 - LinkedIn: [Ghoudi Zakaria](https://linkedin.com/in/zakariaghoudi)
 - Email: zakariaghoudi1@gmail.com
