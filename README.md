@@ -20,7 +20,7 @@ A modern, responsive portfolio website built with React.js showcasing my web dev
 
 ### 🧭 **Navigation**
 
-- **React Router** - Clean URLs with proper routing (`/`, `/about`, `/projects`, `/contact`)
+- **React Router** - Clean URLs with proper routing (`/` , `/about` , `/projects` ,  `/contact` )
 - **Active Navigation** - Visual indication of current page
 - **Smooth Scrolling** - Seamless navigation within pages
 - **Fixed Sidebar** - Always accessible navigation with tooltips
@@ -69,30 +69,32 @@ A modern, responsive portfolio website built with React.js showcasing my web dev
 ### **Installation**
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone
    https://github.com/Zakariaghoudi/MyPortfolio.git
+   ```
+   ```bash
    cd portfolio
-   \`\`\`
+   ```
 
 3. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 4. **Start the development server**
-   \`\`\`bash
+   ```bash
    npm start
-   \`\`\`
+   ```
 
 5. **Open your browser**
    Navigate to `http://localhost:3000` to view the portfolio
 
 ### **Build for Production**
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 This creates an optimized production build in the `build` folder.
 
@@ -137,7 +139,7 @@ Update the following files with your information:
 
 ### **Theme Colors**
 
-\`\`\`css
+```css
 :root {
 --accent-primary: #2563eb; /_ Primary blue _/
 --accent-secondary: #3b82f6; /_ Secondary blue _/
@@ -145,7 +147,7 @@ Update the following files with your information:
 --text-primary: #1f2937; /_ Dark text _/
 /_ ... more variables _/
 }
-\`\`\`
+```
 
 ## 📱 Responsive Breakpoints
 
