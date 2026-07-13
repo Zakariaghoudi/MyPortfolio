@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react"
 import "./About.css"
-import { DiHtml5, DiResponsive, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
+import { DiMongodb, DiHtml5, DiResponsive, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
 import { MdDevices } from "react-icons/md";
 import SEO from "../SEO/SEO"
 import img3 from "../../Assets/img3.jpg"
@@ -50,6 +50,10 @@ const About = () => {
             {icon: <DiNodejs color="#68a063" size="60px" /> },
             {icon: <DiGithub color="#333" size="60px" /> },
             { icon: <MdDevices color="#ff9800" size="60px" />, },
+            
+{ icon: <DiMongodb color="#4DB33D" size="60px" />, },
+{ icon: <SiExpress color="#000000" size="60px" />, }
+
           ].map((skill, index) => (
             <span key={index} className="skill-tag" style={{ display: "flex", alignItems: "center", gap: "0.5em" }}>
               {skill.icon}
