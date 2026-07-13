@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import "./About.css"
 import { DiMongodb, DiHtml5, DiResponsive, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
 import { MdDevices } from "react-icons/md";
+import { SiExpress } from "react-icons/si";
 import SEO from "../SEO/SEO"
 import img3 from "../../Assets/img3.jpg"
 const About = () => {
