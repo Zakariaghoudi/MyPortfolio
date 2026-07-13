@@ -43,13 +43,13 @@ const About = () => {
 
         <div className="skills-grid"> {/* array of icons of skills */}
           {[
-            {icon: <DiHtml5 color="#e34c26" size="55px" /> },
-            {icon: <DiCss3 color="#2965f1" size="55px" /> },
-            {icon: <DiJavascript1 color="#f7df1e" size="55px" /> },
-            {icon: <DiReact color="#61dafb" size="55px" /> },
-            {icon: <DiNodejs color="#68a063" size="55px" /> },
+            {icon: <DiHtml5 color="#e34c26" size="60px" /> },
+            {icon: <DiCss3 color="#2965f1" size="60px" /> },
+            {icon: <DiJavascript1 color="#f7df1e" size="60px" /> },
+            {icon: <DiReact color="#61dafb" size="60px" /> },
+            {icon: <DiNodejs color="#68a063" size="60px" /> },
             {icon: <DiGithub color="#333" size="60px" /> },
-            { icon: <MdDevices color="#ff9800" size="90px" />, },
+            { icon: <MdDevices color="#ff9800" size="60px" />, },
           ].map((skill, index) => (
             <span key={index} className="skill-tag" style={{ display: "flex", alignItems: "center", gap: "0.5em" }}>
               {skill.icon}
