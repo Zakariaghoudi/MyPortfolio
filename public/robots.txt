@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://my-portfolio-xi-jet-65.vercel.app/sitemap.xml
+Sitemap: https://ghoudizakaria.vercel.app/sitemap.xml
