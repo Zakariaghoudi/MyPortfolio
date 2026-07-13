@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import "./About.css"
 import { DiHtml5, DiResponsive, DiCss3, DiJavascript1, DiReact, DiNodejs, DiGithub } from 'react-icons/di';
+import { MdDevices } from "react-icons/md";
 import SEO from "../SEO/SEO"
 import img3 from "../../Assets/img3.jpg"
 const About = () => {
@@ -48,7 +49,7 @@ const About = () => {
             {icon: <DiReact color="#61dafb" size="55px" /> },
             {icon: <DiNodejs color="#68a063" size="55px" /> },
             {icon: <DiGithub color="#333" size="60px" /> },
-            {icon: <DiResponsive color="#ff9800" size="90px" /> },
+            { icon: <MdDevices color="#ff9800" size="90px" />, },
           ].map((skill, index) => (
             <span key={index} className="skill-tag" style={{ display: "flex", alignItems: "center", gap: "0.5em" }}>
               {skill.icon}
