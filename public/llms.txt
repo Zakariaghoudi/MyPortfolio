@@ -4,10 +4,10 @@
 
 ## Pages
 
-- [Home](https://my-portfolio-xi-jet-65.vercel.app/): Introduction, hero section, and quick overview of skills and featured projects.
-- [About](https://my-portfolio-xi-jet-65.vercel.app/about): Background, skills (HTML, CSS, JavaScript, React, Node.js), and education.
-- [Projects](https://my-portfolio-xi-jet-65.vercel.app/projects): Full list of projects including Movie App, Weather App, Chat Application, To-Do List App, Calculator, and Simple Clock.
-- [Contact](https://my-portfolio-xi-jet-65.vercel.app/contact): Contact form and direct contact information.
+- [Home](https://ghoudizakaria.vercel.app/): Introduction, hero section, and quick overview of skills and featured projects.
+- [About](https://ghoudizakaria.vercel.app/about): Background, skills (HTML, CSS, JavaScript, React, Node.js), and education.
+- [Projects](https://ghoudizakaria.vercel.app/projects): Full list of projects including Movie App, Weather App, Chat Application, To-Do List App, Calculator, and Simple Clock.
+- [Contact](https://ghoudizakaria.vercel.app/contact): Contact form and direct contact information.
 
 ## Notes
 
