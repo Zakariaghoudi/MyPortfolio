@@ -6,9 +6,9 @@ import "./Home.css"
 import SEO from "../SEO/SEO"
 import logo from '../../Assets/img.jpg'
 import CV from '../../Assets/CV.pdf'
-import calcul from "../../Assets/images/calcul.png"
-import clock from "../../Assets/images/clock.jpeg"
-import movieApp from "../../Assets/images/movieapp.png"
+import calcul from "../../Assets/images/calcul.webp"
+import clock from "../../Assets/images/clock.webp"
+import movieApp from "../../Assets/images/movieapp.webp"
 //useRef hooks to create reference fo pages sections
 const Home = () => {
   const aboutRef = useRef(null)
