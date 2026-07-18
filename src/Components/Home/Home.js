@@ -4,7 +4,7 @@ import { useAnimation , motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import "./Home.css"
 import SEO from "../SEO/SEO"
-import logo from '../../Assets/img.jpg'
+import logo from '../../Assets/img.webp'
 import CV from '../../Assets/CV.pdf'
 import calcul from "../../Assets/images/calcul.webp"
 import clock from "../../Assets/images/clock.webp"
