@@ -1,22 +1,20 @@
 .theme-toggle {
   position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  z-index: 50;
-  padding: 0.75rem;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: var(--bg-secondary);
-  color: var(--accent-primary);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
-  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  outline: none;
+  cursor: pointer;
+  color: inherit;
 }
-
 .theme-toggle:hover {
   background-color: var(--bg-tertiary);
   transform: scale(1.05);
