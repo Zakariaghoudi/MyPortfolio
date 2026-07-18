@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 // Change this once you buy a custom domain (recommended for SEO).
-const SITE_URL = "https://ghoudizakaria.vercel.app/";
+const SITE_URL = "https://ghoudizakaria.vercel.app";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 /**
