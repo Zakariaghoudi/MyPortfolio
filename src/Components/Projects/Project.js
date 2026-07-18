@@ -49,14 +49,17 @@ const ProjectCard = ({ title, description, techStack, imageUrl, liveLink, github
   return (
     <div className="project-card">
       <img
-        src={imageUrl || "/placeholder.svg"}
-        alt={title}
-        className="project-image"
-        onError={(e) => {
-          e.target.onError = null
-          e.target.src = "/placeholder.svg?height=400&width=600&text=Project+Image"
-        }}
-      />
+  src={imageUrl || "/placeholder.svg"}
+  alt={title}
+  className="project-image"
+  loading="lazy"
+  width="600"
+  height="400"
+  onError={(e) => {
+    e.target.onError = null
+    e.target.src = "/placeholder.svg?height=400&width=600&text=Project+Image"
+  }}
+/>
       <div className="project-content">
         <h4 className="project-title">{title}</h4>
         <p className="project-description">{description}</p>
