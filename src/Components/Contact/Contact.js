@@ -66,12 +66,6 @@ const ContactForm = () => {
         />
         {errors.name && <span className="error-message">{errors.name}</span>}
       </div>
-<SEO
-  title="Ghoudi Zakaria | Full-Stack Web Developer"
-  description="Full-stack developer from Tunisia specializing in React, Node.js, and Supabase. Explore my projects, skills, and experience."
-  path="/"
-/>
-
       <div className="form-group">
         <label htmlFor="email" className="form-label">
           Email *
