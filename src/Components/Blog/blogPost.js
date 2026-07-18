@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom"
 import SEO from "../SEO/SEO"
 import CodeBlock from "./CodeBlock"
 import { blogPosts } from "./blogPosts"
-import "./BlogPost.css"
+import "./blogPost.css"
 
 const BlogPost = () => {
   const { slug } = useParams()
