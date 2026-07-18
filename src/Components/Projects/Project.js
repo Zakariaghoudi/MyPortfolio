@@ -2,12 +2,12 @@
 import { useState, useEffect } from "react"
 import "./Project.css"
 import SEO from "../SEO/SEO"
-import calcul from "../../Assets/images/calcul.png"
-import clock from "../../Assets/images/clock.jpeg"
-import todolist from "../../Assets/images/todolist.png"
-import weatherapp from "../../Assets/images/weather.png"
-import movieApp from "../../Assets/images/movieapp.png"
-import chatApp from "../../Assets/images/chat-app.png"
+import calcul from "../../Assets/images/calcul.webp"
+import clock from "../../Assets/images/clock.webp"
+import todolist from "../../Assets/images/todolist.webp"
+import weatherapp from "../../Assets/images/weather.webp"
+import movieApp from "../../Assets/images/movieapp.webp"
+import chatApp from "../../Assets/images/chat-app.webp"
 const ExternalLinkIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
