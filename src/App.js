@@ -14,6 +14,9 @@ import Contact from "./Components/Contact/Contact";
 import Projects from "./Components/Projects/Project";
 import SideBar from "./Components/NavBar/SideBar";
 import LoadingPage from "./Components/LoadingPage/LoadingPage";
+import Blog from "./Components/Blog/blog"
+import BlogPost from "./Components/Blog/blogPost"
+
 
 // Theme Provider Component
 const ThemeProvider = ({ children }) => {
@@ -107,6 +110,8 @@ const AppContent = () => {
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/projects" element={<Projects />} />
+                  <Route path="/blog" element={<Blog />} />
+<Route path="/blog/:slug" element={<BlogPost />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>
               </motion.div>
