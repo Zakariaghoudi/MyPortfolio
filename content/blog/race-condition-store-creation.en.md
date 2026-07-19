@@ -1,7 +1,7 @@
 ---
 title: Fixing a Race Condition in Store Creation with Supabase
 description: How I found and fixed an intermittent bug in HiSabi's store creation flow, and the retry pattern that solved it for good.
-date: 2026-07-15
+date: "2026-07-15"
 tags: Supabase, React Native, Async
 ---
 
