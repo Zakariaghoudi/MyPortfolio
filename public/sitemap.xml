@@ -18,7 +18,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- <loc>https://ghoudizakaria.vercel.app/blog</loc>
+  <url>
+    <loc>https://ghoudizakaria.vercel.app/blog</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
