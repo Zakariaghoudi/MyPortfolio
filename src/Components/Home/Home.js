@@ -208,6 +208,7 @@ const Home = () => {
                 <img
                   src= {project.imageUrl}
                   alt={`${project.title} project screenshot`}
+                  loading="lazy"
                   className="project-image-preview"
                   onError={(e) => {
                     e.target.onerror = null
