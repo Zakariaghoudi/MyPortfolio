@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,15 +8,16 @@ import {
 } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { HelmetProvider } from "react-helmet-async";
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
-import Contact from "./Components/Contact/Contact";
-import Projects from "./Components/Projects/Project";
 import SideBar from "./Components/NavBar/SideBar";
 import LoadingPage from "./Components/LoadingPage/LoadingPage";
-import Blog from "./Components/Blog/blog"
-import BlogPost from "./Components/Blog/blogPost"
 
+// Lazy-loaded route pages: each becomes its own chunk instead of bloating main.js
+const Home = lazy(() => import("./Components/Home/Home"));
+const About = lazy(() => import("./Components/About/About"));
+const Contact = lazy(() => import("./Components/Contact/Contact"));
+const Projects = lazy(() => import("./Components/Projects/Project"));
+const Blog = lazy(() => import("./Components/Blog/blog"));
+const BlogPost = lazy(() => import("./Components/Blog/blogPost"));
 
 // Theme Provider Component
 const ThemeProvider = ({ children }) => {
@@ -54,14 +55,12 @@ const ThemeProvider = ({ children }) => {
 };
 
 // Main App Content Component
-
 const AppContent = () => {
   const location = useLocation();
   const [currentPath, setCurrentPath] = useState(location.pathname);
   const [loading, setLoading] = useState(true);
 
   // Show loading page for 3 seconds on mount
-
   useEffect(() => {
     setCurrentPath(location.pathname);
   }, [location.pathname]);
@@ -97,25 +96,27 @@ const AppContent = () => {
             className="main-content"
             //style={{ position: "relative", minHeight: "80vh" }}
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={location.pathname}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                //style={{ position: "absolute", width: "100%" }}
-              >
-                <Routes location={location}>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/blog" element={<Blog />} />
-<Route path="/blog/:slug" element={<BlogPost />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
-              </motion.div>
-            </AnimatePresence>
+            <Suspense fallback={<LoadingPage />}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={location.pathname}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  //style={{ position: "absolute", width: "100%" }}
+                >
+                  <Routes location={location}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
+                    <Route path="/contact" element={<Contact />} />
+                  </Routes>
+                </motion.div>
+              </AnimatePresence>
+            </Suspense>
           </main>
         </>
       )}
@@ -123,7 +124,7 @@ const AppContent = () => {
   );
 };
 
-const App = () => {
+function App() {
   return (
     <HelmetProvider>
       <Router>
@@ -131,6 +132,6 @@ const App = () => {
       </Router>
     </HelmetProvider>
   );
-};
+}
 
 export default App;
