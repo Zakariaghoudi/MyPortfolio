@@ -6,10 +6,12 @@
 
 - [Home](https://ghoudizakaria.vercel.app/): Introduction, hero section, and quick overview of skills and featured projects.
 - [About](https://ghoudizakaria.vercel.app/about): Background, skills (HTML, CSS, JavaScript, React, Node.js), and education.
-- [Projects](https://ghoudizakaria.vercel.app/projects): Full list of projects including Movie App, Weather App, Chat Application, To-Do List App, Calculator, and Simple Clock.
+- [Projects](https://ghoudizakaria.vercel.app/projects): Full list of projects including Movie App, Weather App, Chat Application, To-Do List App, Calculator, and Simple Clock and more...
+- [Blog](https://ghoudizakaria.vercel.app/blog): Articles and posts about web development, React, Node.js, and software engineering topics.
 - [Contact](https://ghoudizakaria.vercel.app/contact): Contact form and direct contact information.
 
 ## Notes
 
 - Built with React (Create React App), React Router, and Framer Motion.
+- Blog posts are accessible individually at /blog/:slug.
 - Source code for individual projects is linked from the Projects page (GitHub).
