@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { useParams, Link } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 import SEO from "../SEO/SEO"
 import CodeBlock from "./CodeBlock"
 import { blogPosts } from "./blogPosts"
+
 import "./blogPost.css"
 
 const BlogPost = () => {
@@ -28,6 +30,19 @@ const BlogPost = () => {
         description={post.description[lang]}
         path={`/blog/${post.slug}`}
       />
+      <Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.title[lang],
+      "description": post.description[lang],
+      "author": { "@type": "Person", "name": "Ghoudi Zakaria" },
+      "datePublished": post.date,
+      "inLanguage": lang
+    })}
+  </script>
+</Helmet>
       <div className="blog-post-page">
         <div className="blog-post-topbar">
           <Link to="/blog" className="back-link">← Back to Blog</Link>
