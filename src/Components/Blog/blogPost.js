@@ -37,8 +37,13 @@ const BlogPost = () => {
       "@type": "Article",
       "headline": post.title[lang],
       "description": post.description[lang],
-      "author": { "@type": "Person", "name": "Ghoudi Zakaria" },
-      "datePublished": post.date,
+      "image": "https://ghoudizakaria.vercel.app/og-image.png",
+      "author": { 
+        "@type": "Person", 
+        "name": "Ghoudi Zakaria",
+        "url": "https://ghoudizakaria.vercel.app"
+      },
+      "datePublished": `${post.date}T00:00:00Z`,
       "inLanguage": lang
     })}
   </script>
