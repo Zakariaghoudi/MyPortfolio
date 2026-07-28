@@ -1,6 +1,12 @@
 # Ghoudi Zakaria - Portfolio
 
-> Full-Stack Web Developer specializing in React, Node.js, and AI-assisted web development. This site showcases projects, skills, and background.
+Full-Stack Web Developer specializing in React, Node.js, and AI-assisted web development. This site showcases projects, skills, and background.
+
+## About
+
+Ghoudi Zakaria is a Full-Stack Web Developer based in Tunisia, specializing in React, Node.js, and AI-assisted development. Experience includes building production applications such as HiSabi, a multi-tenant point-of-sale (POS) system for Tunisian retail businesses, built with Expo, Supabase, and TypeScript.
+
+Connect: [GitHub](https://github.com/Zakariaghoudi) | [LinkedIn](https://www.linkedin.com/in/zakariaghoudi)
 
 ## Pages
 
@@ -8,7 +14,13 @@
 - [About](https://ghoudizakaria.vercel.app/about): Background, skills (HTML, CSS, JavaScript, React, Node.js), and education.
 - [Projects](https://ghoudizakaria.vercel.app/projects): Full list of projects including Movie App, Weather App, Chat Application, To-Do List App, Calculator, and Simple Clock and more...
 - [Blog](https://ghoudizakaria.vercel.app/blog): Articles and posts about web development, React, Node.js, and software engineering topics.
+  - [Express.js Cheat Sheet](https://ghoudizakaria.vercel.app/blog/express-js-cheat-sheet)
+  - [Fixing a Race Condition in Store Creation](https://ghoudizakaria.vercel.app/blog/race-condition-store-creation)
 - [Contact](https://ghoudizakaria.vercel.app/contact): Contact form and direct contact information.
+
+## Featured Projects
+
+- **HiSabi**: Multi-tenant POS system for Tunisian retail businesses. Built with Expo, Supabase, and TypeScript.
 
 ## Notes
 
