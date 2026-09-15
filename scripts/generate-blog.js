@@ -26,7 +26,19 @@ function parseMarkdownToBlocks(md) {
       }
       i++
       blocks.push({ type: "code", language: lang, code: codeLines.join("\n") })
+      
+    } else if (/^!\[.*?\]\(.*?\)\s*$/.test(line.trim())) {
+      // Matches: ![alt text](/path/to/image.svg)
+      const imgMatch = line.trim().match(/^!\[(.*?)\]\((.*?)\)\s*$/)
+      blocks.push({
+        type: "image",
+        alt: imgMatch[1] || "",
+        src: imgMatch[2],
+      })
+      i++
     } else if (line.trim() === "") {
+      i++
+    }else if (line.trim() === "") {
       i++
     } else {
       const paraLines = []
