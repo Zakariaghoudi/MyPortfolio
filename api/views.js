@@ -1,1 +1,1 @@
-export { default } from "../../lib/view-counter/api-handler"
+export { default } from "../src/lib/view-counter/api-handler"
