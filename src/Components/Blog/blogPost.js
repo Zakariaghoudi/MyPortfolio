@@ -22,7 +22,6 @@ const BlogPost = () => {
       </div>
     )
   }
-
   const blocks = post.content[lang]
 
   return (
