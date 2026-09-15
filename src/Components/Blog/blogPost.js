@@ -22,6 +22,7 @@ const BlogPost = () => {
       </div>
     )
   }
+
   const blocks = post.content[lang]
 
   return (
@@ -60,28 +61,30 @@ const BlogPost = () => {
           </button>
         </div>
 
-        <span className="blog-post-date">{post.date}</span>
+        <div className="blog-post-meta">
+          <span className="blog-post-date">{post.date}</span>
+          {views !== null && (
+            <span className="blog-post-views">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              {views.toLocaleString()}
+            </span>
+          )}
+        </div>
+
         <h1 className="blog-post-title" dir={lang === "ar" ? "rtl" : "ltr"}>
           {post.title[lang]}
         </h1>
 
-        {views !== null && (
-          <div className="blog-post-meta">
-  <span className="blog-post-date">{post.date}</span>
-  {views !== null && (
-    <span className="blog-post-views">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z" />
-        <circle cx="12" cy="12" r="3" />
-      </svg>
-      {views.toLocaleString()}
-    </span>
-  )}
-</div>
-<h1 className="blog-post-title" dir={lang === "ar" ? "rtl" : "ltr"}>
-  {post.title[lang]}
-</h1>
- <div className="blog-post-content" dir={lang === "ar" ? "rtl" : "ltr"}>
+        <div className="blog-post-tags">
+          {post.tags.map((tag, i) => (
+            <span key={i} className="blog-tag">{tag}</span>
+          ))}
+        </div>
+
+        <div className="blog-post-content" dir={lang === "ar" ? "rtl" : "ltr"}>
           {blocks.map((block, i) => {
             if (block.type === "heading") {
               return <h3 key={i} className="blog-post-heading">{block.text}</h3>
