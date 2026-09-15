@@ -16,19 +16,22 @@ function parseMarkdownToBlocks(md) {
     if (line.startsWith("## ")) {
       blocks.push({ type: "heading", text: line.slice(3).trim() })
       i++
-    } else if (line.startsWith("```")) {
-      const lang = line.slice(3).trim() || "javascript"
-      i++
-      const codeLines = []
-      while (i < lines.length && !lines[i].startsWith("```")) {
-        codeLines.push(lines[i])
+    }       } else if (line.startsWith("```")) {
+        const lang = line.slice(3).trim() || "javascript"
         i++
-      }
-      i++
-      blocks.push({ type: "code", language: lang, code: codeLines.join("\n") })
-      
-    } else if (/^!\[.*?\]\(.*?\)\s*$/.test(line.trim())) {
-      // Matches: ![alt text](/path/to/image.svg)
+        const codeLines = []
+        while (i < lines.length && !lines[i].startsWith("```")) {
+          codeLines.push(lines[i])
+          i++
+        }
+        i++
+        blocks.push({ type: "code", language: lang, code: codeLines.join("\n") })
+      } else if (/^!\[.*?\]\(.*?\)\s*$/.test(line.trim())) {
+        const imgMatch = line.trim().match(/^!\[(.*?)\]\((.*?)\)\s*$/)
+        blocks.push({ type: "image", text: imgMatch[1] || "", src: imgMatch[2] })
+        i++
+      } else if (line.trim() === "") {
+        i++
       const imgMatch = line.trim().match(/^!\[(.*?)\]\((.*?)\)\s*$/)
       blocks.push({
         type: "image",
