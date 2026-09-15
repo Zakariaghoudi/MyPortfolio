@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async"
 import SEO from "../SEO/SEO"
 import CodeBlock from "./CodeBlock"
 import { blogPosts } from "./blogPosts"
-import { useViewCounter } from "../../lib/view-counter/useViewCounter"
+import { useViewCounter } from "../../../lib/view-counter/useViewCounter"
 import "./blogPost.css"
 
 
