@@ -9,9 +9,9 @@ import "./blogPost.css"
 
 
 const BlogPost = () => {
-  const views = useViewCounter(post.slug)
   const { slug } = useParams()
   const [lang, setLang] = useState("en")
+  const views = useViewCounter(slug)
   const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) {
@@ -33,26 +33,23 @@ const BlogPost = () => {
         path={`/blog/${post.slug}`}
       />
       <Helmet>
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": post.title[lang],
-      "description": post.description[lang],
-      "image": "https://ghoudizakaria.vercel.app/og-image.png",
-      "author": { 
-        "@type": "Person", 
-        "name": "Ghoudi Zakaria",
-        "url": "https://ghoudizakaria.vercel.app"
-      },
-      {views !== null && (
-  <span className="blog-post-views">👁 {views.toLocaleString()}</span>
-)},
-      "datePublished": `${post.date}T00:00:00Z`,
-      "inLanguage": lang
-    })}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title[lang],
+            "description": post.description[lang],
+            "image": "https://ghoudizakaria.vercel.app/og-image.png",
+            "author": {
+              "@type": "Person",
+              "name": "Ghoudi Zakaria",
+              "url": "https://ghoudizakaria.vercel.app"
+            },
+            "datePublished": `${post.date}T00:00:00Z`,
+            "inLanguage": lang
+          })}
+        </script>
+      </Helmet>
       <div className="blog-post-page">
         <div className="blog-post-topbar">
           <Link to="/blog" className="back-link">← Back to Blog</Link>
@@ -69,6 +66,10 @@ const BlogPost = () => {
           {post.title[lang]}
         </h1>
 
+        {views !== null && (
+          <span className="blog-post-views">👁 {views.toLocaleString()}</span>
+        )}
+
         <div className="blog-post-tags">
           {post.tags.map((tag, i) => (
             <span key={i} className="blog-tag">{tag}</span>
@@ -81,15 +82,15 @@ const BlogPost = () => {
               return <h3 key={i} className="blog-post-heading">{block.text}</h3>
             }
             if (block.type === "image") {
-  return (
-    <img
-      key={i}
-      src={block.src}
-      alt={block.text || ""}
-      className="blog-post-image"
-    />
-  )
-}
+              return (
+                <img
+                  key={i}
+                  src={block.src}
+                  alt={block.text || ""}
+                  className="blog-post-image"
+                />
+              )
+            }
             if (block.type === "paragraph") {
               return <p key={i} className="blog-post-paragraph">{block.text}</p>
             }
@@ -105,4 +106,3 @@ const BlogPost = () => {
 }
 
 export default BlogPost
-
