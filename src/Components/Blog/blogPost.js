@@ -75,6 +75,16 @@ const BlogPost = () => {
             if (block.type === "heading") {
               return <h3 key={i} className="blog-post-heading">{block.text}</h3>
             }
+            if (block.type === "image") {
+  return (
+    <img
+      key={i}
+      src={block.src}
+      alt={block.text || ""}
+      className="blog-post-image"
+    />
+  )
+}
             if (block.type === "paragraph") {
               return <p key={i} className="blog-post-paragraph">{block.text}</p>
             }
