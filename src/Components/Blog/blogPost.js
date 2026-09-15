@@ -4,10 +4,12 @@ import { Helmet } from "react-helmet-async"
 import SEO from "../SEO/SEO"
 import CodeBlock from "./CodeBlock"
 import { blogPosts } from "./blogPosts"
-
+import { useViewCounter } from "../../lib/view-counter/useViewCounter"
 import "./blogPost.css"
 
+
 const BlogPost = () => {
+  const views = useViewCounter(post.slug)
   const { slug } = useParams()
   const [lang, setLang] = useState("en")
   const post = blogPosts.find((p) => p.slug === slug)
@@ -43,6 +45,9 @@ const BlogPost = () => {
         "name": "Ghoudi Zakaria",
         "url": "https://ghoudizakaria.vercel.app"
       },
+      {views !== null && (
+  <span className="blog-post-views">👁 {views.toLocaleString()}</span>
+)},
       "datePublished": `${post.date}T00:00:00Z`,
       "inLanguage": lang
     })}
