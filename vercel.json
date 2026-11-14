@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/((?!\\.well-known/).*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/static/(.*)",
